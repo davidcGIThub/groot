@@ -1,0 +1,5 @@
+<launch>
+
+		<node name="rosbag" pkg="rosbag" type="record" args="-a -o groot_sensors" output="screen"/>
+
+</launch>

@@ -1,0 +1,7 @@
+<?yml version="1.0"?>
+
+<launch>
+
+  <node name="baro_laser" pkg="groot" type="ros_read.py" output="screen"/>
+
+</launch>

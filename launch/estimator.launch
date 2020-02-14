@@ -1,0 +1,15 @@
+<launch>
+
+  <group ns="estimator">
+		<node name="ekf" pkg="roscopter" type="ekf_node" output="screen">
+      <param name="param_filename" value="$(find roscopter)/params/ekf.yaml"/>
+      <remap from="imu" to="/imu/data"/>
+      <remap from="pose" to="/groot_ned"/>
+      <!-- <remap from="reference" to="/ins/ins"/> -->
+      <remap from="baro" to="/baro"/>
+      <remap from="is_gnss" to="/ins/gps"/>
+      <!-- <remap from="ublox_gnss" to="/PosVelEcef"/> -->
+		</node> 
+  </group>
+
+</launch>

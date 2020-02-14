@@ -1,0 +1,8 @@
+<launch>
+
+  <!-- <include file="$(find groot)/launch/gps.launch"/> -->
+  <include file="$(find groot)/launch/rosflight.launch"/>
+  <!-- <include file="$(find groot)/launch/baro_laser.launch"/> -->
+  <include file="$(find groot)/launch/inertial_sense.launch" ns="ins"/>
+
+</launch>

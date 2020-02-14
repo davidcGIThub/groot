@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="mocap" pkg="optitrack_vrpn" type="node"/>
+
+</launch>

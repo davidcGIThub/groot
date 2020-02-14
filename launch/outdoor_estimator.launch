@@ -1,0 +1,6 @@
+<launch>
+
+  <include file="$(find groot)/launch/outdoor_sensor.launch"/>
+  <include file="$(find groot)/launch/estimator.launch"/>
+
+</launch>

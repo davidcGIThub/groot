@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- <include file="$(find groot)/launch/baro_laser.launch"/> -->
+  <include file="$(find groot)/launch/mocap.launch"/>
+  <include file="$(find groot)/launch/rosflight.launch"/>
+  <include file="$(find groot)/launch/estimator.launch"/>
+  <include file="$(find groot)/launch/controller.launch"/>
+
+</launch>

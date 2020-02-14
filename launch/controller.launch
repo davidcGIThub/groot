@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- Load common parameters -->
+  <rosparam command="load" file="$(find roscopter)/params/groot.yaml"/>
+
+  <!-- PID Position Controller -->
+  <node name="controller" pkg="roscopter" type="controller">
+    <remap from="estimate" to="/estimator/odom"/>
+    <remap from="is_flying" to="/estimator/is_flying"/>
+  </node>
+
+  <!-- Waypoint Manager -->
+  <node name="waypoint_manager" pkg="roscopter" type="waypoint_manager.py" output="screen">
+    <remap from="waypoint" to="high_level_command"/>
+    <remap from="state" to="/estimator/odom"/>
+  </node>
+
+</launch>
